@@ -1,0 +1,86 @@
+%%%%-------------------------------------------------------------------------------
+%%%    Simple exercise on predicate logic formalization
+%%%    
+%%%    Based on the discussion about Infomation Disorder as given in the paper
+%%%    "Fake news, disinformation and misinformation in social media: a review"
+%%%    Esma Aïmeur, Sabrine Amri, and Gilles Brassard
+%%%    Social Network Analysis and Mining (2023) 13:30 
+%%%    https://doi.org/10.1007/s13278-023-01028-5
+%%%    
+%%%    Mehwish Arshid, Mauricio Ayala-Rincon
+%%%    Universidade de Brasilia   
+%%%       
+%%%    Last modified on: 5 November 2023
+%%%%------------------------------------------------------------------------------
+InfDisorder_pj[Information:Type+]: THEORY
+BEGIN
+
+Authority : TYPE = {science, government, religion, economy, industry}
+a,b,c : Var Authority
+i, j, k : Var Information
+
+% predicates 
+
+VerifiableInf :  [Information -> bool]  
+Certified : [Authority -> [Information -> bool]]  % Some information is authenticated by some authority
+Certified : [Information -> bool]                 % Some information is authenticated by all authorities
+False_inf : [Authority -> [Information -> bool]]
+False_inf : [Information -> bool]
+True_inf : [Authority -> [Information -> bool]]
+True_inf : [Information -> bool]
+DisInf : [Authority -> [Information -> bool]]    % Some authority classify some information as disinformation
+MissInf : [Authority -> [Information -> bool]]  % Some authority classify some information as misinformation
+MalInf : [Authority -> [Information -> bool]]      % Some authority classify some information as malinformation
+Fake_News : [Authority -> [Information -> bool]]
+bad_intention : [Authority -> [Information -> bool]]
+not_mislead_int : [Authority -> [Information -> bool]]   
+
+
+%  Basic relationships  
+
+ax0 : AXIOM Certified(a)(i) IFF Certified(i)
+ax1 : AXIOM Certified(a)(i)  IFF False_inf(a)(i) OR True_inf(a)(i)
+ax2 : AXIOM NOT (False_inf(a)(i) AND True_inf(a)(i))
+ax_certf : AXIOM Certified(i)  IFF FORALL (a: Authority) : Certified(a)(i)
+ax_true : AXIOM True_inf(i)  IFF FORALL (a: Authority) : True_inf(a)(i)
+ax_false : AXIOM False_inf(i)  IFF FORALL (a: Authority) : False_inf(a)(i)
+ax3 : AXIOM DisInf(a)(i) IMPLIES False_inf(a)(i)
+ax4 : AXIOM MissInf(a)(i) IMPLIES False_inf(a)(i)
+ax5 : AXIOM MalInf(a)(i)  IMPLIES True_inf(a)(i)
+ax6  : AXIOM DisInf(a)(i) OR MalInf(a)(i) IFF bad_intention(a)(i)
+ax6a : AXIOM MissInf(a)(i) IMPLIES not_mislead_int(a)(i)
+ax7 : AXIOM Fake_News(a)(i) IFF (DisInf(a)(i) OR MissInf(a)(i))
+
+% Formalize the conjectures below. 
+% Only if requiered include additional axioms
+
+% Q1
+Exclusivity_auth_information  : LEMMA 
+  Certified(a)(i)  IMPLIES ((False_inf(a)(i) AND NOT True_inf(a)(i)) OR 
+  (NOT False_inf(a)(i) AND True_inf(a)(i)))
+
+% Q2
+Exclusivity_auth  : LEMMA   
+  Certified(i)   IMPLIES FORALL (a: Authority) : ((False_inf(a)(i) AND 
+  NOT True_inf(a)(i)) OR (NOT False_inf(a)(i) AND True_inf(a)(i)))
+
+% Q3
+Exclusivity   :  LEMMA NOT (False_inf(i) AND True_inf(i)) 
+
+% Q4
+BadInt_is_VerifiableInf :  LEMMA  bad_intention(a)(i) IMPLIES Certified(a)(i)
+
+% Q5
+FakeNews_VerifiableInf : LEMMA Fake_News(a)(i) IMPLIES Certified(i)
+
+% Q6
+FakeNews_Int : LEMMA Fake_News(a)(i) IMPLIES 
+(bad_intention(a)(i) OR not_mislead_int(a)(i))
+
+% Q7
+FakeNews_False_Inf : LEMMA Fake_News(a)(i) IMPLIES False_inf(a)(i)
+
+% Q8
+FakeNews_False_abs : LEMMA (FORALL (a) : Fake_News(a)(i)) IMPLIES False_inf(i)
+
+END InfDisorder_pj
