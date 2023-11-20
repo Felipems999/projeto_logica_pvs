@@ -71,6 +71,7 @@ Exclusivity_auth  : LEMMA
 Exclusivity   :  LEMMA NOT (False_inf(i) AND True_inf(i)) 
 
 % Q4
+% @QED BadInt_is_VerifiableInf proved by felipems999 on Mon, 20 Nov 2023 22:34:20 GMT
 BadInt_is_VerifiableInf :  LEMMA  bad_intention(a)(i) IMPLIES Certified(a)(i)
 
 % Q5
