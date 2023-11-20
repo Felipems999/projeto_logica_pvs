@@ -57,43 +57,10 @@ ax7 : AXIOM Fake_News(a)(i) IFF (DisInf(a)(i) OR MissInf(a)(i))
 % Q1
 % A primeira questao, consiste em demonstrar que certified implica false_inf
 % e NOT true_inf ou NOT false_inf e true_inf.
+% @QED Exclusivity_auth_information proved by felipems999 on Mon, 20 Nov 2023 22:02:42 GMT
 Exclusivity_auth_information  : LEMMA 
   Certified(a)(i)  IMPLIES ((False_inf(a)(i) AND NOT True_inf(a)(i)) OR 
   (NOT False_inf(a)(i) AND True_inf(a)(i)))
-
-  Exclusivity_auth_information: LEMMA
-    (False_inf(a)(i) AND NOT True_inf(a)(i)) IFF (NOT False_inf(a)(i) AND True_inf(a)(i))
-
-      % Parte 1: (False_inf(a)(i) AND NOT True_inf(a)(i)) IMPLIES (NOT False_inf(a)(i) AND True_inf(a)(i))
-      (1) ASSUME (False_inf(a)(i) AND NOT True_inf(a)(i));
-      (2) SHOW (NOT False_inf(a)(i) AND True_inf(a)(i));
-
-      % Por (1), temos False_inf(a)(i) AND NOT True_inf(a)(i). Podemos simplificar.
-      (3) CASES BY (1);
-      (4) CASE (False_inf(a)(i) AND NOT True_inf(a)(i)):
-
-      % Agora, queremos mostrar NOT False_inf(a)(i) AND True_inf(a)(i). Podemos usar a tática ANDI.
-      (5) ANDI (NOT False_inf(a)(i), True_inf(a)(i), 4);
-
-      % Agora temos (NOT False_inf(a)(i) AND True_inf(a)(i)) como desejado.
-      (6) QED BY (5);
-
-      % Parte 2: (NOT False_inf(a)(i) AND True_inf(a)(i)) IMPLIES (False_inf(a)(i) AND NOT True_inf(a)(i))
-      (7) ASSUME (NOT False_inf(a)(i) AND True_inf(a)(i));
-      (8) SHOW (False_inf(a)(i) AND NOT True_inf(a)(i));
-
-      % Por (7), temos NOT False_inf(a)(i) AND True_inf(a)(i). Podemos simplificar.
-      (9) CASES BY (7);
-      (10) CASE (NOT False_inf(a)(i) AND True_inf(a)(i)):
-
-      % Agora, queremos mostrar False_inf(a)(i) AND NOT True_inf(a)(i). Podemos usar a tática ANDI.
-      (11) ANDI (False_inf(a)(i), NOT True_inf(a)(i), 10);
-
-      % Agora temos (False_inf(a)(i) AND NOT True_inf(a)(i)) como desejado.
-      (12) QED BY (11);
-
-      % Comprovamos ambas as direções, portanto, a prova está completa.
-      (13) QED BY (2), (8);    
 
 % Q2
 Exclusivity_auth  : LEMMA   
