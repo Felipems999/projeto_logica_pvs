@@ -75,9 +75,11 @@ Exclusivity   :  LEMMA NOT (False_inf(i) AND True_inf(i))
 BadInt_is_VerifiableInf :  LEMMA  bad_intention(a)(i) IMPLIES Certified(a)(i)
 
 % Q5
+% @QED FakeNews_VerifiableInf proved by felipems999 on Tue, 21 Nov 2023 21:50:01 GMT
 FakeNews_VerifiableInf : LEMMA Fake_News(a)(i) IMPLIES Certified(i)
 
 % Q6
+% @QED FakeNews_Int proved by felipems999 on Tue, 21 Nov 2023 23:21:31 GMT
 FakeNews_Int : LEMMA Fake_News(a)(i) IMPLIES 
 (bad_intention(a)(i) OR not_mislead_int(a)(i))
 
