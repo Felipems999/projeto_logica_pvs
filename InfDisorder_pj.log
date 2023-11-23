@@ -1,9 +1,9 @@
 
 Context changed to ~/Documents/LC/projeto_logica_pvs/
 Parsing theorem
-theorem parsed in 0.16 seconds
+theorem parsed in 0.09 seconds
 Typechecking theorem
-InfDisorder_pj typechecked in 0.07s: No TCCs generated
+InfDisorder_pj typechecked in 0.27s: No TCCs generated
 Warning: (method typecheck* (subtype-judgement t t t)), :operator was
          defined in
          /home/felipems999/pvs/pvs-7.1.0/nasalib/pvs-patches/patch-20210707-trivial-judgements.lisp
