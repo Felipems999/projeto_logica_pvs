@@ -1,0 +1,12 @@
+Proof summary for theory InfDisorder_pj
+
+	Exclusivity_auth_information....................................✅ proved              (1.592 s)
+	Exclusivity_auth................................................✅ proved              (1.266 s)
+	Exclusivity.....................................................✨ untried             (0.481 s)
+	BadInt_is_VerifiableInf.........................................✅ proved              (2.034 s)
+	FakeNews_VerifiableInf..........................................✅ proved              (2.427 s)
+	FakeNews_Int....................................................✅ proved              (1.337 s)
+	FakeNews_False_Inf..............................................✅ proved              (1.108 s)
+	FakeNews_False_abs..............................................✅ proved              (1.103 s)
+
+Theory InfDisorder_pj totals: 8 formulas, 8 attempted, 7 succeeded (11.348 s)

@@ -55,8 +55,6 @@ ax7 : AXIOM Fake_News(a)(i) IFF (DisInf(a)(i) OR MissInf(a)(i))
 % Only if requiered include additional axioms
 
 % Q1
-% A primeira questao, consiste em demonstrar que certified implica false_inf
-% e NOT true_inf ou NOT false_inf e true_inf.
 % @QED Exclusivity_auth_information proved by felipems999 on Mon, 20 Nov 2023 22:02:42 GMT
 Exclusivity_auth_information  : LEMMA 
   Certified(a)(i)  IMPLIES ((False_inf(a)(i) AND NOT True_inf(a)(i)) OR 
@@ -84,9 +82,11 @@ FakeNews_Int : LEMMA Fake_News(a)(i) IMPLIES
 (bad_intention(a)(i) OR not_mislead_int(a)(i))
 
 % Q7
+% @QED FakeNews_False_Inf proved by felipems999 on Tue, 21 Nov 2023 23:31:41 GMT
 FakeNews_False_Inf : LEMMA Fake_News(a)(i) IMPLIES False_inf(a)(i)
 
 % Q8
+% @QED FakeNews_False_abs proved by felipems999 on Thu, 23 Nov 2023 17:54:56 GMT
 FakeNews_False_abs : LEMMA (FORALL (a) : Fake_News(a)(i)) IMPLIES False_inf(i)
 
 END InfDisorder_pj
