@@ -71,29 +71,35 @@
  (Exclusivity 0
   (Exclusivity-1 nil 3909592386
    ("" (skeep)
-    (("" (lemma ax_true)
-      (("" (lemma ax_false)
-        (("" (lemma ax_certf)
-          (("" (inst -1 i)
-            (("" (inst -2 i)
-              (("" (inst -3 i)
-                (("" (assert)
-                  (("" (flatten)
-                    (("" (hide -1)
-                      (("" (split)
-                        (("1" (postpone) nil nil)
-                         ("2" (hide -3 -4)
-                          (("2" (lemma ax1)
-                            (("2" (assert)
-                              (("2"
-                                (inst?)
-                                (("2"
-                                  (assert)
-                                  (("2"
-                                    (skeep)
-                                    (("2"
-                                      (assert)
-                                      (("2" (postpone) nil nil))
+    (("" (lemma ax_false)
+      (("" (inst?)
+        (("" (flatten -1)
+          (("" (grind)
+            (("" (inst -2 "science")
+              (("" (lemma ax1)
+                (("" (inst?)
+                  (("" (flatten -1)
+                    (("" (lemma ax0)
+                      (("" (lemma ax2)
+                        (("" (inst?)
+                          (("" (inst?)
+                            (("" (flatten -1)
+                              ((""
+                                (grind)
+                                ((""
+                                  (lemma ax_true)
+                                  ((""
+                                    (inst?)
+                                    ((""
+                                      (flatten -1)
+                                      ((""
+                                        (prop)
+                                        ((""
+                                          (inst -2 "science")
+                                          nil
+                                          nil))
+                                        nil))
+
                                       nil))
                                     nil))
                                   nil))
@@ -113,16 +119,15 @@
       nil))
     nil)
    ((ax_false formula-decl nil InfDisorder_pj nil)
-    (ax_certf formula-decl nil InfDisorder_pj nil)
     (Authority type-decl nil InfDisorder_pj nil)
-    (ax2 formula-decl nil InfDisorder_pj nil)
     (boolean nonempty-type-decl nil booleans nil)
     (science? adt-recognizer-decl "[Authority -> boolean]"
      InfDisorder_pj nil)
     (science adt-constructor-decl "(science?)" InfDisorder_pj nil)
     (ax0 formula-decl nil InfDisorder_pj nil)
-    (ax1 formula-decl nil InfDisorder_pj nil)
     (ax_true formula-decl nil InfDisorder_pj nil)
+    (ax2 formula-decl nil InfDisorder_pj nil)
+    (ax1 formula-decl nil InfDisorder_pj nil)
     (Information formal-nonempty-type-decl nil InfDisorder_pj nil))
    shostak))
  (BadInt_is_VerifiableInf 0
