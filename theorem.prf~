@@ -51,7 +51,147 @@
     (Authority type-decl nil InfDisorder_pj nil))
    shostak))
  (Exclusivity 0
-  (Exclusivity-1 nil 3909592386 ("" (postpone) nil nil) nil shostak))
+  (Exclusivity-1 nil 3909592386
+   ("" (skeep)
+    (("" (lemma ax_false)
+      (("" (inst?)
+        (("" (flatten -1)
+          (("" (grind)
+            (("" (lemma ax_certf)
+              (("" (inst?)
+                (("" (grind)
+                  (("1" (lemma ax_true)
+                    (("1" (inst?)
+                      (("1" (flatten -1)
+                        (("1" (grind)
+                          (("1" (lemma ax1)
+                            (("1" (inst?)
+                              (("1"
+                                (rewrite -1)
+                                (("1"
+                                  (rewrite -2)
+                                  (("1"
+                                    (rewrite -3)
+                                    (("1"
+                                      (rewrite -4)
+                                      (("1"
+                                        (lemma ax0)
+                                        (("1"
+                                          (inst?)
+                                          (("1"
+                                            (lemma ax_false)
+                                            (("1"
+                                              (lemma ax_true)
+                                              (("1"
+                                                (inst?)
+                                                (("1"
+                                                  (inst?)
+                                                  (("1"
+                                                    (flatten)
+                                                    (("1"
+                                                      (grind)
+                                                      (("1"
+                                                        (lemma ax1)
+                                                        (("1"
+                                                          (inst?)
+                                                          (("1"
+                                                            (inst
+                                                             -1
+                                                             "science")
+                                                            (("1"
+                                                              (inst?)
+                                                              (("1"
+                                                                (inst?)
+                                                                (("1"
+                                                                  (inst?)
+                                                                  (("1"
+                                                                    (flatten)
+                                                                    (("1"
+                                                                      (grind)
+                                                                      (("1"
+                                                                        (lemma
+                                                                         ax0)
+                                                                        (("1"
+                                                                          (lemma
+                                                                           ax1)
+                                                                          (("1"
+                                                                            (lemma
+                                                                             ax2)
+                                                                            (("1"
+                                                                              (inst?)
+                                                                              (("1"
+                                                                                (inst?)
+                                                                                (("1"
+                                                                                  (inst?)
+                                                                                  (("1"
+                                                                                    (flatten)
+                                                                                    (("1"
+                                                                                      (grind)
+                                                                                      nil
+                                                                                      nil))
+                                                                                    nil))
+                                                                                  nil))
+                                                                                nil))
+                                                                              nil))
+                                                                            nil))
+                                                                          nil))
+                                                                        nil))
+                                                                      nil))
+                                                                    nil))
+                                                                  nil))
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (lemma ax1)
+                    (("2" (lemma ax2)
+                      (("2" (inst?)
+                        (("2" (inst?)
+                          (("2" (flatten) (("2" (grind) nil nil)) nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((ax_false formula-decl nil InfDisorder_pj nil)
+    (ax_certf formula-decl nil InfDisorder_pj nil)
+    (Authority type-decl nil InfDisorder_pj nil)
+    (ax2 formula-decl nil InfDisorder_pj nil)
+    (science adt-constructor-decl "(science?)" InfDisorder_pj nil)
+    (science? adt-recognizer-decl "[Authority -> boolean]"
+     InfDisorder_pj nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (ax0 formula-decl nil InfDisorder_pj nil)
+    (ax1 formula-decl nil InfDisorder_pj nil)
+    (ax_true formula-decl nil InfDisorder_pj nil)
+    (Information formal-nonempty-type-decl nil InfDisorder_pj nil))
+   shostak))
  (BadInt_is_VerifiableInf 0
   (BadInt_is_VerifiableInf-1 nil 3909507279
    ("" (skeep)

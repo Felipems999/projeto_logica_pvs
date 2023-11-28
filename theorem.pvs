@@ -73,6 +73,7 @@ Exclusivity_auth  : LEMMA
   NOT True_inf(a)(i)) OR (NOT False_inf(a)(i) AND True_inf(a)(i)))
 
 % Q3
+% @QED Exclusivity proved by felipems999 on Tue, 28 Nov 2023 20:21:03 GMT
 Exclusivity   :  LEMMA NOT (False_inf(i) AND True_inf(i)) 
 
 % Q4
