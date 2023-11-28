@@ -68,6 +68,7 @@ Exclusivity_auth_information  : LEMMA
   (NOT False_inf(a)(i) AND True_inf(a)(i)))
 
 % Q2Merge
+% @QED Exclusivity_auth proved by felipems999 on Tue, 28 Nov 2023 21:02:34 GMT
 Exclusivity_auth  : LEMMA   
   Certified(i)   IMPLIES FORALL (a: Authority) : ((False_inf(a)(i) AND 
   NOT True_inf(a)(i)) OR (NOT False_inf(a)(i) AND True_inf(a)(i)))

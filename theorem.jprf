@@ -1046,7 +1046,7 @@
    "info": {
     "theory": "InfDisorder_pj",
     "formula": "Exclusivity",
-    "status": "unchecked",
+    "status": "proved",
     "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
     "shasum": "c43f56737f0535f4820e66874c0bcf82bd2f1b0f9836cd0333308fae8f766c30"
    },
@@ -1064,31 +1064,25 @@
      },
      {
       "branch": "",
-      "name": "(lemma ax_true)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
       "name": "(lemma ax_false)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(lemma ax_certf)",
+      "name": "(inst?)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(inst -1 i)",
+      "name": "(flatten -1)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(inst -2 i)",
+      "name": "(grind)",
       "type": "proof-command",
       "rules": []
      },
@@ -1106,19 +1100,7 @@
      },
      {
       "branch": "",
-      "name": "(assert)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(flatten)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(hide -1)",
+      "name": "(inst?)",
       "type": "proof-command",
       "rules": []
      },
