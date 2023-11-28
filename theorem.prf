@@ -76,7 +76,10 @@
                                       (flatten -1)
                                       ((""
                                         (prop)
-                                        (("" (grind) nil nil))
+                                        ((""
+                                          (inst -2 "science")
+                                          nil
+                                          nil))
                                         nil))
                                       nil))
                                     nil))

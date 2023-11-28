@@ -1022,7 +1022,7 @@
      },
      {
       "branch": "",
-      "name": "(grind)",
+      "name": "(inst -2 \"science\")",
       "type": "proof-command",
       "rules": []
      }
