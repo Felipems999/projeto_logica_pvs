@@ -67,7 +67,7 @@ Exclusivity_auth_information  : LEMMA
   Certified(a)(i)  IMPLIES ((False_inf(a)(i) AND NOT True_inf(a)(i)) OR 
   (NOT False_inf(a)(i) AND True_inf(a)(i)))
 
-% Q2
+% Q2Merge
 Exclusivity_auth  : LEMMA   
   Certified(i)   IMPLIES FORALL (a: Authority) : ((False_inf(a)(i) AND 
   NOT True_inf(a)(i)) OR (NOT False_inf(a)(i) AND True_inf(a)(i)))

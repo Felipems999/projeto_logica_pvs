@@ -203,7 +203,7 @@
      },
      {
       "branch": "",
-      "name": "(prop)",
+      "name": "(split)",
       "type": "proof-command",
       "rules": [
        {
@@ -213,33 +213,90 @@
         "rules": [
          {
           "branch": "1",
-          "name": "(lemma ax1)",
+          "name": "(split)",
           "type": "proof-command",
-          "rules": []
-         },
-         {
-          "branch": "1",
-          "name": "(inst?)",
-          "type": "proof-command",
-          "rules": []
-         },
-         {
-          "branch": "1",
-          "name": "(lemma ax0)",
-          "type": "proof-command",
-          "rules": []
-         },
-         {
-          "branch": "1",
-          "name": "(inst?)",
-          "type": "proof-command",
-          "rules": []
-         },
-         {
-          "branch": "1",
-          "name": "(assert)",
-          "type": "proof-command",
-          "rules": []
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(propax)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(lemma ax0)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(inst -1 a i)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(flatten)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(hide -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(lemma ax1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(inst -1 a i)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(flatten)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(hide -2)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
          }
         ]
        },
@@ -250,21 +307,48 @@
         "rules": [
          {
           "branch": "2",
-          "name": "(lemma ax2)",
+          "name": "(split)",
           "type": "proof-command",
-          "rules": []
-         },
-         {
-          "branch": "2",
-          "name": "(inst?)",
-          "type": "proof-command",
-          "rules": []
-         },
-         {
-          "branch": "2",
-          "name": "(assert)",
-          "type": "proof-command",
-          "rules": []
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(lemma ax2)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(inst -1 a i)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(propax)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
          }
         ]
        }
@@ -297,79 +381,25 @@
      },
      {
       "branch": "",
-      "name": "(lemma ax_certf)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
       "name": "(lemma ax6)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(inst?)",
+      "name": "(inst -1 a i)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(lemma ax3)",
+      "name": "(flatten)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(lemma ax4)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(lemma ax1)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(lemma ax0)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
+      "name": "(hide -1)",
       "type": "proof-command",
       "rules": []
      },
@@ -381,57 +411,132 @@
      },
      {
       "branch": "",
-      "name": "(skeep)",
+      "name": "(split -1)",
       "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(prop)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(lemma ax6)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(lemma ax5)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(flatten -2)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(hide -2)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(assert)",
-      "type": "proof-command",
-      "rules": []
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(lemma ax3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(hide -2 -3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(lemma ax1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(flatten)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(hide -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(lemma ax5)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(hide -2 -3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(lemma ax1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(flatten)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(hide -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
      }
     ]
    }
@@ -460,109 +565,13 @@
      },
      {
       "branch": "",
-      "name": "(lemma ax0)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(flatten -1)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(hide -2)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(assert)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
       "name": "(lemma ax7)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(flatten -1)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(lemma ax3)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(lemma ax4)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(lemma ax1)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(flatten -1)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(hide -1)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(hide -5)",
+      "name": "(inst -1 a i)",
       "type": "proof-command",
       "rules": []
      },
@@ -574,39 +583,150 @@
      },
      {
       "branch": "",
-      "name": "(use BadInt_is_VerifiableInf)",
+      "name": "(split)",
       "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(assert)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(lemma ax6)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(assert)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(grind)",
-      "type": "proof-command",
-      "rules": []
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(lemma ax3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(lemma ax1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(hide -2 -3 -4)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(lemma ax0)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(lemma ax4)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(hide -2 -3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(lemma ax1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(hide -2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(lemma ax0)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
      }
     ]
    }
@@ -635,73 +755,13 @@
      },
      {
       "branch": "",
-      "name": "(lemma ax6a)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(assert)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(lemma ax6)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(flatten -1)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(hide -2)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(assert)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
       "name": "(lemma ax7)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(flatten -1)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(hide -2)",
+      "name": "(inst -1 a i)",
       "type": "proof-command",
       "rules": []
      },
@@ -710,6 +770,75 @@
       "name": "(assert)",
       "type": "proof-command",
       "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(split)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(hide 2 -2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(lemma ax6)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(hide -2 1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(lemma ax6a)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
      }
     ]
    }
@@ -738,49 +867,13 @@
      },
      {
       "branch": "",
-      "name": "(lemma ax3)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(lemma ax4)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
       "name": "(lemma ax7)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(flatten -1)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(hide -2)",
+      "name": "(inst -1 a i)",
       "type": "proof-command",
       "rules": []
      },
@@ -792,9 +885,66 @@
      },
      {
       "branch": "",
-      "name": "(grind)",
+      "name": "(hide -2)",
       "type": "proof-command",
       "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(split)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(lemma ax3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(lemma ax4)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst -1 a i)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
      }
     ]
    }
@@ -817,7 +967,19 @@
     "rules": [
      {
       "branch": "",
+      "name": "(use FakeNews_False_Inf)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
       "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst?)",
       "type": "proof-command",
       "rules": []
      },
@@ -829,37 +991,31 @@
      },
      {
       "branch": "",
-      "name": "(inst?)",
+      "name": "(inst -1 i)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(flatten -1)",
+      "name": "(flatten)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(grind)",
+      "name": "(hide -1)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(lemma ax3)",
+      "name": "(assert)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(lemma ax4)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(lemma ax7)",
+      "name": "(skeep)",
       "type": "proof-command",
       "rules": []
      },
@@ -871,19 +1027,13 @@
      },
      {
       "branch": "",
-      "name": "(inst?)",
+      "name": "(assert)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(inst?)",
-      "type": "proof-command",
-      "rules": []
-     },
-     {
-      "branch": "",
-      "name": "(grind)",
+      "name": "(inst -1 a)",
       "type": "proof-command",
       "rules": []
      }
@@ -896,7 +1046,7 @@
    "info": {
     "theory": "InfDisorder_pj",
     "formula": "Exclusivity",
-    "status": "proved",
+    "status": "unchecked",
     "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
     "shasum": "c43f56737f0535f4820e66874c0bcf82bd2f1b0f9836cd0333308fae8f766c30"
    },
@@ -914,25 +1064,31 @@
      },
      {
       "branch": "",
+      "name": "(lemma ax_true)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
       "name": "(lemma ax_false)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(inst?)",
+      "name": "(lemma ax_certf)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(flatten -1)",
+      "name": "(inst -1 i)",
       "type": "proof-command",
       "rules": []
      },
      {
       "branch": "",
-      "name": "(grind)",
+      "name": "(inst -2 i)",
       "type": "proof-command",
       "rules": []
      },
@@ -950,7 +1106,19 @@
      },
      {
       "branch": "",
-      "name": "(inst?)",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(hide -1)",
       "type": "proof-command",
       "rules": []
      },
